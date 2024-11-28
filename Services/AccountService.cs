@@ -1,6 +1,5 @@
-using System.Text.Json.Nodes;
-using team05project.Models;
-namespace team05project.Services
+using team_project.Models;
+namespace team_project.Services
 {
     public class AccountService
     {
@@ -30,10 +29,10 @@ namespace team05project.Services
                 return "This account already exists. Login.";
             }
             else{
-                Account accountData = new Account { Id = 1, Username = username, Password = password};
+                Account accountData = new Account { Id = _accounts.Count() + 1, Username = username, Password = password};
                  _accounts.Add(accountData );
 
-                return "Your account was successfully created.";
+                return "Your account have been successfully created.";
             }
            
         }

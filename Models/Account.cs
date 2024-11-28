@@ -1,4 +1,4 @@
-namespace team05project.Models
+namespace team_project.Models
 {
     public class Account
     {

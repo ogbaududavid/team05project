@@ -1,5 +1,5 @@
 using team_project.Components;
-using team05project.Services;
+using team_project.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 

@@ -1,13 +1,13 @@
-@page "/login"
+@page "/signup"
 @using team_project.Services
 @using team_project.Models
 @rendermode InteractiveServer
 @inject IJSRuntime JSRuntime
 
-<div class="login-form-container ">
-    <h2 class="login-title">Login</h2>
+<div class="signup-form-container ">
+    <h2 class="signup-title">Create Account</h2>
 
-    <form @onsubmit="login">
+    <form @onsubmit="signup">
         <div>
             <label class="form-label" for="username">Username</label>
             <input class="form-input " type="text" @bind="@username" @bind:event="oninput" id="username" name="Username" required minlength="5" maxlength="30"/>
@@ -17,7 +17,7 @@
             <input class="form-input" type="password" @bind="@password" @bind:event="oninput" id="password" name="Password" required  minlength="7" maxlength="15"/>
         </div>
         <span class="message">@message</span>
-        <button class="submit-btn" type="submit">Login</button>
+        <button class="submit-btn" type="submit">signup</button>
     </form>
 </div>
 
@@ -27,9 +27,9 @@
 
     private object message = "";
     
-    private void login()
+    private void signup()
     {
         AccountService Account = new AccountService();
-        message = Account.ValidateAccount(username, password);
+        message = Account.CreateAccount(username, password);
     }
 }    
