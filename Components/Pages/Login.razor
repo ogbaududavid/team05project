@@ -1,0 +1,35 @@
+@page "/login"
+@using team05project.Services
+@using team05project.Models
+@rendermode InteractiveServer
+@inject IJSRuntime JSRuntime
+
+<div class="login-form-container ">
+    <h2 class="login-title">Login</h2>
+
+    <form>
+        <div>
+            <label class="form-label" for="username">Username</label>
+            <input class="form-input " type="text" @bind="@username" @bind:event="oninput" id="username" name="Username" required minlength="5" maxlength="30"/>
+        </div>
+        <div>
+            <label class="form-label" for="password">Password</label>
+            <input class="form-input" type="password" @bind="@password" @bind:event="oninput" id="password" name="Password" required  minlength="7" maxlength="15"/>
+        </div>
+        <span class="message">@message</span>
+        <button class="submit-btn" type="submit" @onsubmit="login">Login</button>
+    </form>
+</div>
+
+@code {
+    private string username;
+    private string password;
+
+    private object message = "";
+    
+    private void login()
+    {
+        AccountService Account = new AccountService();
+        message = Account.ValidateAccount(username, password);
+    }
+}    

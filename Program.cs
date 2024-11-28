@@ -1,10 +1,14 @@
 using team_project.Components;
+using team05project.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
+builder.Services.AddSingleton<AccountService>();
+
 
 var app = builder.Build();
 
