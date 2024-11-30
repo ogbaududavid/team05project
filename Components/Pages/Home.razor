@@ -1,7 +1,13 @@
 ﻿@page "/"
+@using team_project.Services
+@using team_project.Models
+@rendermode InteractiveServer
+@inject IJSRuntime JSRuntime
+@using team_project.Components
+
 
 <PageTitle>Home</PageTitle>
 
-<h1>Hello, Team 05!</h1>
+<h1>Task Tracker App</h1>
 
-Welcome to your new app.
+<Signup />

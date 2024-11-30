@@ -393,3 +393,65 @@ width: 100%;
         font-size: 14px;
     }
 }
+/* _content/team_project/Components/Pages/Tasks.razor.rz.scp.css */
+.task-list[b-w405awn8f3] {
+    list-style-type: none;
+    padding: 0;
+}
+
+.task-item[b-w405awn8f3] {
+    background-color: #f9f9f9;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.task-form[b-w405awn8f3] {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.form-control[b-w405awn8f3] {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.btn[b-w405awn8f3] {
+    padding: 5px 15px;
+    margin-right: 5px;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+}
+
+.btn-primary[b-w405awn8f3] {
+    background-color: #007bff;
+    color: white;
+}
+
+.btn-secondary[b-w405awn8f3] {
+    background-color: #6c757d;
+    color: white;
+}
+
+.btn-danger[b-w405awn8f3] {
+    background-color: #dc3545;
+    color: white;
+}
+
+.btn-success[b-w405awn8f3] {
+    background-color: #28a745;
+    color: white;
+}
+
+.btn:hover[b-w405awn8f3] {
+    opacity: 0.9;
+}

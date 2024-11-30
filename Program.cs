@@ -8,6 +8,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
 builder.Services.AddSingleton<AccountService>();
+builder.Services.AddSingleton<TaskService>();
 
 
 var app = builder.Build();

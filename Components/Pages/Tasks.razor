@@ -1,0 +1,82 @@
+@page "/tasks"
+@using team_project.Models
+@using team_project.Services
+@inject TaskService TaskService
+
+<PageTitle>Task Tracker</PageTitle>
+
+<h3>Task Tracker</h3>
+
+<button @onclick="AddNewTask">Add New Task</button>
+
+<ul>
+    @foreach (var task in TaskService.GetTasks())
+    {
+        <li>
+            <b>@task.Title</b> - @task.Description <br />
+            Priority: @task.Priority | Deadline: @task.Deadline.ToShortDateString() | Completed: @task.IsCompleted<br />
+            <button @onclick="() => EditTask(task)">Edit</button>
+            <button @onclick="() => DeleteTask(task.Id)">Delete</button>
+        </li>
+    }
+</ul>
+
+@if (showTaskForm)
+{
+    <div>
+        <input type="text" @bind="taskModel.Title" placeholder="Title" />
+        <input type="text" @bind="taskModel.Description" placeholder="Description" />
+        <input type="text" @bind="taskModel.Priority" placeholder="Priority" />
+        <input type="date" @bind="taskModel.Deadline" />
+        <input type="text" @bind="taskModel.Category" placeholder="Category" />
+        <input type="checkbox" @bind="taskModel.IsCompleted" /> Completed
+        <button @onclick="SaveTask">Save</button>
+    </div>
+}
+
+@code {
+    private bool showTaskForm = false;
+    private TaskItem taskModel = new TaskItem();
+    
+    private void AddNewTask()
+    {
+        showTaskForm = true;
+        taskModel = new TaskItem();
+    }
+
+    private void EditTask(TaskItem task)
+    {
+        showTaskForm = true;
+        taskModel = new TaskItem
+        {
+            Id = task.Id,
+            Title = task.Title,
+            Description = task.Description,
+            Priority = task.Priority,
+            Deadline = task.Deadline,
+            Category = task.Category,
+            IsCompleted = task.IsCompleted
+        };
+    }
+
+    private void DeleteTask(string taskId)
+    {
+        TaskService.DeleteTask(taskId);
+    }
+
+    private void SaveTask()
+    {
+        if (string.IsNullOrEmpty(taskModel.Id))
+        {
+            // Creating a new task
+            TaskService.CreateTask(taskModel);
+        }
+        else
+        {
+            // Updating an existing task
+            TaskService.UpdateTask(taskModel);
+        }
+
+        showTaskForm = false;
+    }
+}
