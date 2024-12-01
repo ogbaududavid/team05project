@@ -7,32 +7,41 @@
 
 <h3>Task Tracker</h3>
 
-<button @onclick="AddNewTask">Add New Task</button>
-
-<ul>
-    @foreach (var task in TaskService.GetTasks())
-    {
-        <li>
-            <b>@task.Title</b> - @task.Description <br />
-            Priority: @task.Priority | Deadline: @task.Deadline.ToShortDateString() | Completed: @task.IsCompleted<br />
-            <button @onclick="() => EditTask(task)">Edit</button>
-            <button @onclick="() => DeleteTask(task.Id)">Delete</button>
-        </li>
-    }
-</ul>
+<button @onclick="AddNewTask" class="btn btn-primary">Add New Task</button>
 
 @if (showTaskForm)
 {
-    <div>
-        <input type="text" @bind="taskModel.Title" placeholder="Title" />
-        <input type="text" @bind="taskModel.Description" placeholder="Description" />
-        <input type="text" @bind="taskModel.Priority" placeholder="Priority" />
-        <input type="date" @bind="taskModel.Deadline" />
-        <input type="text" @bind="taskModel.Category" placeholder="Category" />
-        <input type="checkbox" @bind="taskModel.IsCompleted" /> Completed
-        <button @onclick="SaveTask">Save</button>
+    <div class="task-form">
+        <h4>Create or Edit Task</h4>
+        <input type="text" @bind="taskModel.Title" placeholder="Title" class="form-control" />
+        <input type="text" @bind="taskModel.Description" placeholder="Description" class="form-control" />
+        <input type="text" @bind="taskModel.Priority" placeholder="Priority (High, Medium, Low)" class="form-control" />
+        <input type="date" @bind="taskModel.Deadline" class="form-control" />
+        <input type="text" @bind="taskModel.Category" placeholder="Category" class="form-control" />
+        <div class="form-check">
+            <input type="checkbox" @bind="taskModel.IsCompleted" class="form-check-input" id="isCompletedCheck" />
+            <label class="form-check-label" for="isCompletedCheck">Completed</label>
+        </div>
+        <button @onclick="SaveTask" class="btn btn-success">Save</button>
+        <button @onclick="CancelTask" class="btn btn-secondary">Cancel</button>
     </div>
 }
+
+<div class="task-dashboard">
+    @foreach (var task in TaskService.GetTasks())
+    {
+        <div class="task-card">
+            <h4>@task.Title</h4>
+            <p>@task.Description</p>
+            <p><strong>Priority:</strong> @task.Priority</p>
+            <p><strong>Deadline:</strong> @task.Deadline.ToShortDateString()</p>
+            <p><strong>Category:</strong> @task.Category</p>
+            <p><strong>Completed:</strong> @task.IsCompleted</p>
+            <button @onclick="() => EditTask(task)" class="btn btn-secondary">Edit</button>
+            <button @onclick="() => DeleteTask(task.Id)" class="btn btn-danger">Delete</button>
+        </div>
+    }
+</div>
 
 @code {
     private bool showTaskForm = false;
@@ -42,6 +51,7 @@
     {
         showTaskForm = true;
         taskModel = new TaskItem();
+        StateHasChanged();
     }
 
     private void EditTask(TaskItem task)
@@ -57,11 +67,13 @@
             Category = task.Category,
             IsCompleted = task.IsCompleted
         };
+        StateHasChanged();
     }
 
     private void DeleteTask(string taskId)
     {
         TaskService.DeleteTask(taskId);
+        StateHasChanged();
     }
 
     private void SaveTask()
@@ -78,5 +90,12 @@
         }
 
         showTaskForm = false;
+        StateHasChanged();
+    }
+
+    private void CancelTask()
+    {
+        showTaskForm = false;
+        StateHasChanged();
     }
 }
