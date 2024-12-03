@@ -1,101 +1,81 @@
 @page "/tasks"
-@using team_project.Models
 @using team_project.Services
-@inject TaskService TaskService
+@using team_project.Models
+@inject TaskService taskService
 
-<PageTitle>Task Tracker</PageTitle>
+<div class="task-form-container">
+    <h2 class="task-title">Task Tracker</h2>
 
-<h3>Task Tracker</h3>
-
-<button @onclick="AddNewTask" class="btn btn-primary">Add New Task</button>
-
-@if (showTaskForm)
-{
-    <div class="task-form">
-        <h4>Create or Edit Task</h4>
-        <input type="text" @bind="taskModel.Title" placeholder="Title" class="form-control" />
-        <input type="text" @bind="taskModel.Description" placeholder="Description" class="form-control" />
-        <input type="text" @bind="taskModel.Priority" placeholder="Priority (High, Medium, Low)" class="form-control" />
-        <input type="date" @bind="taskModel.Deadline" class="form-control" />
-        <input type="text" @bind="taskModel.Category" placeholder="Category" class="form-control" />
-        <div class="form-check">
-            <input type="checkbox" @bind="taskModel.IsCompleted" class="form-check-input" id="isCompletedCheck" />
-            <label class="form-check-label" for="isCompletedCheck">Completed</label>
+    <form @onsubmit="AddTask">
+        <div>
+            <label class="form-label" for="taskName">Task Name</label>
+            <input class="form-input" type="text" @bind="taskName" @bind:event="oninput" id="taskName" name="TaskName" required minlength="5" maxlength="50"/>
         </div>
-        <button @onclick="SaveTask" class="btn btn-success">Save</button>
-        <button @onclick="CancelTask" class="btn btn-secondary">Cancel</button>
-    </div>
-}
+        <div>
+            <label class="form-label" for="description">Description</label>
+            <textarea class="form-input" @bind="description" @bind:event="oninput" id="description" name="Description" required minlength="10" maxlength="200"></textarea>
+        </div>
+        <div>
+            <label class="form-label" for="dueDate">Due Date</label>
+            <input class="form-input" type="date" @bind="dueDate" @bind:event="oninput" id="dueDate" name="DueDate" required/>
+        </div>
+        <div>
+            <label class="form-label" for="priority">Priority</label>
+            <select class="form-input" @bind="priority" @bind:event="oninput" id="priority" name="Priority" required>
+                <option value="Low">Low</option>
+                <option value="Medium">Medium</option>
+                <option value="High">High</option>
+            </select>
+        </div>
+        <span class="message">@message</span>
+        <button class="submit-btn" type="submit">Add Task</button>
+    </form>
+</div>
 
-<div class="task-dashboard">
-    @foreach (var task in TaskService.GetTasks())
+<div class="task-cards-container">
+    @foreach (var task in tasks)
     {
         <div class="task-card">
-            <h4>@task.Title</h4>
+            <h3>@task.TaskName</h3>
             <p>@task.Description</p>
+            <p><strong>Due Date:</strong> @task.DueDate.ToShortDateString()</p>
             <p><strong>Priority:</strong> @task.Priority</p>
-            <p><strong>Deadline:</strong> @task.Deadline.ToShortDateString()</p>
-            <p><strong>Category:</strong> @task.Category</p>
-            <p><strong>Completed:</strong> @task.IsCompleted</p>
-            <button @onclick="() => EditTask(task)" class="btn btn-secondary">Edit</button>
-            <button @onclick="() => DeleteTask(task.Id)" class="btn btn-danger">Delete</button>
+            <p><strong>Status:</strong> @(task.IsCompleted ? "Completed" : "Pending")</p>
         </div>
     }
 </div>
 
 @code {
-    private bool showTaskForm = false;
-    private TaskItem taskModel = new TaskItem();
-    
-    private void AddNewTask()
+    private string taskName;
+    private string description;
+    private DateTime dueDate;
+    private string priority;
+    private string message = "";
+    private List<TaskItem> tasks = new();
+
+    protected override void OnInitialized()
     {
-        showTaskForm = true;
-        taskModel = new TaskItem();
-        StateHasChanged();
+        tasks = taskService.GetTasks();
     }
 
-    private void EditTask(TaskItem task)
+    private void AddTask()
     {
-        showTaskForm = true;
-        taskModel = new TaskItem
+        var result = taskService.CreateTask(new TaskItem
         {
-            Id = task.Id,
-            Title = task.Title,
-            Description = task.Description,
-            Priority = task.Priority,
-            Deadline = task.Deadline,
-            Category = task.Category,
-            IsCompleted = task.IsCompleted
-        };
-        StateHasChanged();
-    }
+            TaskName = taskName,
+            Description = description,
+            DueDate = dueDate,
+            Priority = priority
+        });
 
-    private void DeleteTask(string taskId)
-    {
-        TaskService.DeleteTask(taskId);
-        StateHasChanged();
-    }
-
-    private void SaveTask()
-    {
-        if (string.IsNullOrEmpty(taskModel.Id))
+        if (result == "Success")
         {
-            // Creating a new task
-            TaskService.CreateTask(taskModel);
+            message = "Task added successfully!";
+            tasks = taskService.GetTasks(); // Refresh the task list
         }
         else
         {
-            // Updating an existing task
-            TaskService.UpdateTask(taskModel);
+            message = result;
         }
-
-        showTaskForm = false;
-        StateHasChanged();
-    }
-
-    private void CancelTask()
-    {
-        showTaskForm = false;
-        StateHasChanged();
     }
 }

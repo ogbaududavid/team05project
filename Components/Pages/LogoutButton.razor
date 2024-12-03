@@ -1,0 +1,14 @@
+@page "/logout"
+@inject NavigationManager Navigation
+
+<button class="logout-btn" @onclick="Logout">Log Out</button>
+
+@code {
+    private void Logout()
+    {
+        // Perform any necessary logout operations here, such as clearing authentication tokens
+
+        // Redirect to the login page
+        Navigation.NavigateTo("/login", true);
+    }
+}

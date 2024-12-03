@@ -3,7 +3,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-
 namespace team_project.Services
 {
     public class TaskService
@@ -25,10 +24,18 @@ namespace team_project.Services
             return _tasks.FirstOrDefault(t => t.Id == id);
         }
 
-        public void CreateTask(TaskItem newTask)
+        public string CreateTask(TaskItem newTask)
         {
-            newTask.Id = Guid.NewGuid().ToString();
-            _tasks.Add(newTask);
+            try
+            {
+                newTask.Id = Guid.NewGuid().ToString();
+                _tasks.Add(newTask);
+                return "Success";
+            }
+            catch (Exception ex)
+            {
+                return $"Error: {ex.Message}";
+            }
         }
 
         public void UpdateTask(TaskItem updatedTask)
@@ -36,11 +43,10 @@ namespace team_project.Services
             var existingTask = GetTaskById(updatedTask.Id);
             if (existingTask != null)
             {
-                existingTask.Title = updatedTask.Title;
+                existingTask.TaskName = updatedTask.TaskName; // Changed from Title to TaskName
                 existingTask.Description = updatedTask.Description;
                 existingTask.Priority = updatedTask.Priority;
-                existingTask.Deadline = updatedTask.Deadline;
-                existingTask.Category = updatedTask.Category;
+                existingTask.DueDate = updatedTask.DueDate; // Changed from Deadline to DueDate
                 existingTask.IsCompleted = updatedTask.IsCompleted;
             }
         }
