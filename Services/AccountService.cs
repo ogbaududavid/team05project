@@ -1,7 +1,4 @@
 using team_project.Models;
-using System.Collections.Generic;
-using System.Linq;
-
 namespace team_project.Services
 {
     public class AccountService

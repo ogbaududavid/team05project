@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "26DCrzClMHlsVQ3F8vKYswzfDVPIesQJjMn+ihNVlFA=",
+  "Hash": "W9axQbpaz6R4IQcLGyPzowD9B5ZvtBkOvIV9xvrcu9Q=",
   "Source": "team_project",
   "BasePath": "_content/team_project",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "team_project\\wwwroot",
       "Source": "team_project",
-      "ContentRoot": "C:\\Users\\adeog\\OneDrive\\Desktop\\team05\\team05project\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\USER\\Desktop\\BYUI\\2024 3 Semester\\CSE 325 .NET Software Development\\team05project\\wwwroot\\",
       "BasePath": "_content/team_project",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\adeog\\OneDrive\\Desktop\\team05\\team05project\\obj\\Debug\\net8.0\\scopedcss\\bundle\\team_project.styles.css",
+      "Identity": "C:\\Users\\USER\\Desktop\\BYUI\\2024 3 Semester\\CSE 325 .NET Software Development\\team05project\\obj\\Debug\\net8.0\\scopedcss\\bundle\\team_project.styles.css",
       "SourceId": "team_project",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\adeog\\OneDrive\\Desktop\\team05\\team05project\\obj\\Debug\\net8.0\\scopedcss\\bundle\\",
+      "ContentRoot": "C:\\Users\\USER\\Desktop\\BYUI\\2024 3 Semester\\CSE 325 .NET Software Development\\team05project\\obj\\Debug\\net8.0\\scopedcss\\bundle\\",
       "BasePath": "_content/team_project",
       "RelativePath": "team_project.styles.css",
       "AssetKind": "All",
@@ -33,13 +33,13 @@
       "AssetTraitValue": "ApplicationBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\adeog\\OneDrive\\Desktop\\team05\\team05project\\obj\\Debug\\net8.0\\scopedcss\\bundle\\team_project.styles.css"
+      "OriginalItemSpec": "C:\\Users\\USER\\Desktop\\BYUI\\2024 3 Semester\\CSE 325 .NET Software Development\\team05project\\obj\\Debug\\net8.0\\scopedcss\\bundle\\team_project.styles.css"
     },
     {
-      "Identity": "C:\\Users\\adeog\\OneDrive\\Desktop\\team05\\team05project\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\team_project.bundle.scp.css",
+      "Identity": "C:\\Users\\USER\\Desktop\\BYUI\\2024 3 Semester\\CSE 325 .NET Software Development\\team05project\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\team_project.bundle.scp.css",
       "SourceId": "team_project",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\adeog\\OneDrive\\Desktop\\team05\\team05project\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\",
+      "ContentRoot": "C:\\Users\\USER\\Desktop\\BYUI\\2024 3 Semester\\CSE 325 .NET Software Development\\team05project\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\",
       "BasePath": "_content/team_project",
       "RelativePath": "team_project.bundle.scp.css",
       "AssetKind": "All",
@@ -52,13 +52,13 @@
       "AssetTraitValue": "ProjectBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\adeog\\OneDrive\\Desktop\\team05\\team05project\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\team_project.bundle.scp.css"
+      "OriginalItemSpec": "C:\\Users\\USER\\Desktop\\BYUI\\2024 3 Semester\\CSE 325 .NET Software Development\\team05project\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\team_project.bundle.scp.css"
     },
     {
-      "Identity": "C:\\Users\\adeog\\OneDrive\\Desktop\\team05\\team05project\\wwwroot\\app.css",
+      "Identity": "C:\\Users\\USER\\Desktop\\BYUI\\2024 3 Semester\\CSE 325 .NET Software Development\\team05project\\wwwroot\\app.css",
       "SourceId": "team_project",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\adeog\\OneDrive\\Desktop\\team05\\team05project\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\USER\\Desktop\\BYUI\\2024 3 Semester\\CSE 325 .NET Software Development\\team05project\\wwwroot\\",
       "BasePath": "_content/team_project",
       "RelativePath": "app.css",
       "AssetKind": "All",
@@ -74,10 +74,10 @@
       "OriginalItemSpec": "wwwroot\\app.css"
     },
     {
-      "Identity": "C:\\Users\\adeog\\OneDrive\\Desktop\\team05\\team05project\\wwwroot\\bootstrap\\bootstrap.min.css",
+      "Identity": "C:\\Users\\USER\\Desktop\\BYUI\\2024 3 Semester\\CSE 325 .NET Software Development\\team05project\\wwwroot\\bootstrap\\bootstrap.min.css",
       "SourceId": "team_project",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\adeog\\OneDrive\\Desktop\\team05\\team05project\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\USER\\Desktop\\BYUI\\2024 3 Semester\\CSE 325 .NET Software Development\\team05project\\wwwroot\\",
       "BasePath": "_content/team_project",
       "RelativePath": "bootstrap/bootstrap.min.css",
       "AssetKind": "All",
@@ -93,10 +93,10 @@
       "OriginalItemSpec": "wwwroot\\bootstrap\\bootstrap.min.css"
     },
     {
-      "Identity": "C:\\Users\\adeog\\OneDrive\\Desktop\\team05\\team05project\\wwwroot\\bootstrap\\bootstrap.min.css.map",
+      "Identity": "C:\\Users\\USER\\Desktop\\BYUI\\2024 3 Semester\\CSE 325 .NET Software Development\\team05project\\wwwroot\\bootstrap\\bootstrap.min.css.map",
       "SourceId": "team_project",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\adeog\\OneDrive\\Desktop\\team05\\team05project\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\USER\\Desktop\\BYUI\\2024 3 Semester\\CSE 325 .NET Software Development\\team05project\\wwwroot\\",
       "BasePath": "_content/team_project",
       "RelativePath": "bootstrap/bootstrap.min.css.map",
       "AssetKind": "All",
@@ -112,10 +112,10 @@
       "OriginalItemSpec": "wwwroot\\bootstrap\\bootstrap.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\adeog\\OneDrive\\Desktop\\team05\\team05project\\wwwroot\\favicon.png",
+      "Identity": "C:\\Users\\USER\\Desktop\\BYUI\\2024 3 Semester\\CSE 325 .NET Software Development\\team05project\\wwwroot\\favicon.png",
       "SourceId": "team_project",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\adeog\\OneDrive\\Desktop\\team05\\team05project\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\USER\\Desktop\\BYUI\\2024 3 Semester\\CSE 325 .NET Software Development\\team05project\\wwwroot\\",
       "BasePath": "_content/team_project",
       "RelativePath": "favicon.png",
       "AssetKind": "All",

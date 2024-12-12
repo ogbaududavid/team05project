@@ -2,11 +2,13 @@
 @using team_project.Services
 @using team_project.Models
 @inject TaskService taskService
+@inject IJSRuntime JSRuntime
+@rendermode InteractiveServer
 
 <div class="task-form-container">
     <h2 class="task-title">Task Tracker</h2>
 
-    <form @onsubmit="AddTask">
+    <form id="task-form">
         <div>
             <label class="form-label" for="taskName">Task Name</label>
             <input class="form-input" type="text" @bind="taskName" @bind:event="oninput" id="taskName" name="TaskName" required minlength="5" maxlength="50"/>
@@ -28,54 +30,125 @@
             </select>
         </div>
         <span class="message">@message</span>
-        <button class="submit-btn" type="submit">Add Task</button>
+        <button class="submit-btn" type="button" @onclick=" () => {if(editTask){UpdateTask();} else{AddTask(); }}">@(editTask? "Update" : "Add Task")</button>
     </form>
 </div>
 
 <div class="task-cards-container">
-    @foreach (var task in tasks)
+    @foreach(var task in tasks)
     {
         <div class="task-card">
+            <div>
+                <button @onclick="() => DeleteTask(task.Id)">Delete</button>
+                <button @onclick="() =>  EditTask(task.Id)">Edit</button>
+            </div>
             <h3>@task.TaskName</h3>
             <p>@task.Description</p>
             <p><strong>Due Date:</strong> @task.DueDate.ToShortDateString()</p>
             <p><strong>Priority:</strong> @task.Priority</p>
-            <p><strong>Status:</strong> @(task.IsCompleted ? "Completed" : "Pending")</p>
+            @if (task.IsCompleted) {
+                <p><strong>Status:</strong>Completed</p>
+            }
+            else {
+                <p><strong>Status:</strong>Pending</p>
+                <button @onclick="() => CompleteTask(task.Id)">Mark as Completed</button>
+            }
         </div>
     }
 </div>
 
 @code {
+    private string id;
     private string taskName;
     private string description;
     private DateTime dueDate;
     private string priority;
-    private string message = "";
-    private List<TaskItem> tasks = new();
+    private string message = "Here we go";  // Default message to check that the UI displays it
+    private bool isCompleted = false;
+    private bool editTask = false;
+    private List<TaskItem> tasks;
 
-    protected override void OnInitialized()
+    protected override async Task OnInitializedAsync()
     {
         tasks = taskService.GetTasks();
     }
 
     private void AddTask()
     {
-        var result = taskService.CreateTask(new TaskItem
+
+        if (string.IsNullOrWhiteSpace(taskName) || string.IsNullOrWhiteSpace(description))
         {
-            TaskName = taskName,
-            Description = description,
-            DueDate = dueDate,
-            Priority = priority
-        });
+            message = "Please fill in all required fields.";
+            StateHasChanged();
+            return;
+        }
+
+        var result = taskService.CreateTask(
+            taskName,
+            description,
+            priority,
+            dueDate,
+            isCompleted
+        );
 
         if (result == "Success")
         {
             message = "Task added successfully!";
-            tasks = taskService.GetTasks(); // Refresh the task list
+            ClearTaskFields();
+            tasks = taskService.GetTasks(); 
         }
+
         else
         {
-            message = result;
+            message = "Error: " + result;
         }
+        
+        StateHasChanged();
+    }
+
+    private void DeleteTask(string id) {
+        taskService.DeleteTask(id);
+        tasks = taskService.GetTasks(); 
+        StateHasChanged();
+    }
+
+    private async void EditTask(string id) {
+      
+        TaskItem currTask = taskService.GetTaskById(id);
+        id = currTask.Id;
+        taskName = currTask.TaskName;
+        description = currTask.Description;
+        dueDate = currTask.DueDate;
+        priority = currTask.Priority;
+        isCompleted = currTask.IsCompleted;
+        editTask = true;
+        await ScrollToTaskForm("task-form");
+    }
+
+    private void UpdateTask() {
+        taskService.UpdateTask(new TaskItem {Id = id, TaskName = taskName, Description = description, DueDate = dueDate, IsCompleted = isCompleted, Priority = priority});
+        editTask = false;
+        ClearTaskFields();
+        StateHasChanged();
+    }
+
+    private async Task ScrollToTaskForm(string id)
+    {
+        // JavaScript to scroll to the task form
+        await JSRuntime.InvokeVoidAsync("scrollToElement", id);
+    }
+
+    private void CompleteTask(string id) {
+        taskService.CompleteTask(id);
+        StateHasChanged();
+    }
+
+    private void ClearTaskFields() {
+        taskName = "";
+        description = "";
+        dueDate = DateTime.Now;
+        priority = "";
+        isCompleted = false;
+
     }
 }

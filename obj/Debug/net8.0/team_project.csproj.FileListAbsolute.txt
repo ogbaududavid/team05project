@@ -92,3 +92,4 @@ C:\Users\adeog\OneDrive\Desktop\team05\team05project\obj\Debug\net8.0\team_proje
 C:\Users\adeog\OneDrive\Desktop\team05\team05project\obj\Debug\net8.0\team_project.genruntimeconfig.cache
 C:\Users\adeog\OneDrive\Desktop\team05\team05project\obj\Debug\net8.0\ref\team_project.dll
 C:\Users\adeog\OneDrive\Desktop\team05\team05project\obj\Debug\net8.0\scopedcss\Components\Pages\Tasks.razor.rz.scp.css
+C:\Users\USER\Desktop\BYUI\2024 3 Semester\CSE 325 .NET Software Development\team05project\obj\Debug\net8.0\scopedcss\Components\Pages\Tasks.razor.rz.scp.css

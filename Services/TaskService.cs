@@ -1,55 +1,65 @@
 using team_project.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 
 namespace team_project.Services
 {
     public class TaskService
     {
-        private List<TaskItem> _tasks = new();
-
-        public TaskService()
-        {
-            // Initialize with some default tasks (optional)
-        }
+        private static List<TaskItem> _tasks = new List<TaskItem>();
 
         public List<TaskItem> GetTasks()
         {
             return _tasks;
         }
 
-        public TaskItem GetTaskById(string id)
+        public TaskItem? GetTaskById(string id)
         {
-            return _tasks.FirstOrDefault(t => t.Id == id);
+            TaskItem task =  _tasks.Find(t => t.Id == id);
+            if(task == null){
+                return null;
+            } 
+            else {
+                return task;
+            }
         }
-
-        public string CreateTask(TaskItem newTask)
+        
+        public string CreateTask(string taskName, string description, string priority, DateTime dueDate, bool isCompleted)
         {
+            var id = Guid.NewGuid().ToString();
             try
             {
-                newTask.Id = Guid.NewGuid().ToString();
-                _tasks.Add(newTask);
-                return "Success";
+                TaskItem task = new TaskItem
+                {
+                    Id = id,
+                    TaskName = taskName,
+                    Description = description,
+                    Priority = priority,
+                    DueDate = dueDate,
+                    IsCompleted = isCompleted
+                };
+                _tasks.Add(task);  // Adding the task to the static list
+                return "Success";  // Return success if everything works fine
             }
             catch (Exception ex)
             {
-                return $"Error: {ex.Message}";
+                return $"Error: {ex.Message}";  // Handle any exceptions and return an error message
             }
         }
 
-        public void UpdateTask(TaskItem updatedTask)
+
+        public void UpdateTask(TaskItem task)
         {
-            var existingTask = GetTaskById(updatedTask.Id);
+            var existingTask = GetTaskById(task.Id);
             if (existingTask != null)
             {
-                existingTask.TaskName = updatedTask.TaskName; // Changed from Title to TaskName
-                existingTask.Description = updatedTask.Description;
-                existingTask.Priority = updatedTask.Priority;
-                existingTask.DueDate = updatedTask.DueDate; // Changed from Deadline to DueDate
-                existingTask.IsCompleted = updatedTask.IsCompleted;
+                // Find the task by matching its Id
+                int index = _tasks.FindIndex(t => t.Id == task.Id);
+                if (index != -1)
+                {
+                    _tasks[index] = task; 
+                }
             }
         }
+
 
         public void DeleteTask(string id)
         {
@@ -57,6 +67,18 @@ namespace team_project.Services
             if (taskToDelete != null)
             {
                 _tasks.Remove(taskToDelete);
+            }
+        }
+
+        public void CompleteTask(string id)
+        {
+            var task = GetTaskById(id);
+
+            if (task != null)
+            {
+                task.IsCompleted = true;
+                int index = _tasks.IndexOf(task);
+                _tasks[index] = task;
             }
         }
     }
