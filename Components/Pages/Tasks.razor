@@ -5,6 +5,13 @@
 @inject IJSRuntime JSRuntime
 @rendermode InteractiveServer
 
+
+<div class="top-bar">
+    <div class="logout-container">
+        <LogoutButton />
+    </div>
+</div>
+
 <div class="task-form-container">
     <h2 class="task-title">Task Tracker</h2>
 
@@ -33,6 +40,8 @@
         <button class="submit-btn" type="button" @onclick=" () => {if(editTask){UpdateTask();} else{AddTask(); }}">@(editTask? "Update" : "Add Task")</button>
     </form>
 </div>
+
+
 
 <div class="task-cards-container">
     @foreach(var task in tasks)

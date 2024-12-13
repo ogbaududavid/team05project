@@ -1,3 +1,25 @@
+.logout-container {
+    text-align: right;
+    margin-top: 20px;
+    margin-right: 50px;
+
+}
+
+.logout-btn {
+    background-color: #007bff; /* Blue color */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.logout-btn:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+
 .task-form-container {
     max-width: 600px;
     margin: 0 auto;
