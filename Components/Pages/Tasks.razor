@@ -70,9 +70,9 @@
     private string id;
     private string taskName;
     private string description;
-    private DateTime dueDate;
+    private DateTime dueDate = DateTime.Now;
     private string priority;
-    private string message = "Here we go";  // Default message to check that the UI displays it
+    private string message = "Here we go!";  // Default message to check that the UI displays it
     private bool isCompleted = false;
     private bool editTask = false;
     private List<TaskItem> tasks;
