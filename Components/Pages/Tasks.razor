@@ -119,26 +119,35 @@
         tasks = taskService.GetTasks(); 
         StateHasChanged();
     }
+//updated this
+    private async void EditTask(string taskId)
+{
+    TaskItem currTask = taskService.GetTaskById(taskId);
+    id = currTask.Id;  // Assign to the class-level field
+    taskName = currTask.TaskName;
+    description = currTask.Description;
+    dueDate = currTask.DueDate;
+    priority = currTask.Priority;
+    isCompleted = currTask.IsCompleted;
+    editTask = true;
+    await ScrollToTaskForm("task-form");
+}
 
-    private async void EditTask(string id) {
-      
-        TaskItem currTask = taskService.GetTaskById(id);
-        id = currTask.Id;
-        taskName = currTask.TaskName;
-        description = currTask.Description;
-        dueDate = currTask.DueDate;
-        priority = currTask.Priority;
-        isCompleted = currTask.IsCompleted;
-        editTask = true;
-        await ScrollToTaskForm("task-form");
-    }
-
-    private void UpdateTask() {
-        taskService.UpdateTask(new TaskItem {Id = id, TaskName = taskName, Description = description, DueDate = dueDate, IsCompleted = isCompleted, Priority = priority});
-        editTask = false;
-        ClearTaskFields();
-        StateHasChanged();
-    }
+    private void UpdateTask()
+{
+    taskService.UpdateTask(new TaskItem
+    {
+        Id = id,  // Use the class-level 'id' field
+        TaskName = taskName,
+        Description = description,
+        DueDate = dueDate,
+        IsCompleted = isCompleted,
+        Priority = priority
+    });
+    editTask = false;
+    ClearTaskFields();
+    StateHasChanged();
+}
 
     private async Task ScrollToTaskForm(string id)
     {
