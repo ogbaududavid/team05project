@@ -227,7 +227,7 @@ main[b-30x1mty0us] {
     font-weight: bolder;
 
     margin-bottom: 20px;
-    color: #007bff;
+    color: #074f9c;;
 }
 
 /* Form group styling */
@@ -256,7 +256,7 @@ main[b-30x1mty0us] {
 }
 
 .form-input:focus[b-0tf1iooemy] {
-    border-color: #007bff;
+    border-color: #074f9c;;
     outline: none;
     background-color: #fff;
 }
@@ -267,7 +267,7 @@ main[b-30x1mty0us] {
     padding: 12px;
     font-size: 16px;
     color: #fff;
-    background-color: #007bff;
+    background-color: #074f9c;;
     border: none;
     border-radius: 4px;
     cursor: pointer;
@@ -279,7 +279,7 @@ text-align: center;
 width: 100%;
 }
 .submit-btn:hover[b-0tf1iooemy] {
-    background-color: #0056b3;
+    background-color: #074f9c;;
 }
 
 /* Responsive design */
