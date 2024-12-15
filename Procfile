@@ -1,1 +1,1 @@
-web: dotnet team_project.dll
+web: dotnet run --project team_project.csproj
