@@ -5,7 +5,6 @@ Task Tracker is a simple and efficient task management web application built usi
 ## Team Members
 - **Jojo Masebe**
 - **David Adeogun**
-- **Stacy Oliverson**
 - **David Chinedu Ogbaudu**
  
 ## Project Overview
@@ -20,7 +19,6 @@ Task Tracker is a simple and efficient task management web application built usi
   - **Create Tasks**: Users can create tasks with attributes such as priority tags, deadlines, and categories.
   - **Edit and Delete Tasks**: Easily update or remove tasks as needed.
   - **Mark Tasks as Complete**: Keep track of finished tasks.
-- **Dashboard**: A user-friendly dashboard for tracking overall task progress.
 - **Performance**: Optimized for speed and usability, ensuring a smooth user experience.
 - **Accessibility**: Designed to be accessible and usable by a wide range of users.
  

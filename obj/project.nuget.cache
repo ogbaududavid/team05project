@@ -1,12 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "w6mPqedC6zygLkJM7/m+AvtpPFd5D+8+nwA3xHaMOY1z/bP159JSgRvdOTg+IROjR6zNwEq0R/8R/fQcKq2yLA==",
+  "dgSpecHash": "DYyZg3AGHTTegqIkRsT76mjJdgfNzfeVz81EOyrK54GAKwhixk6ee+IqdrV5uNiRgSKqUpujoEdp03MSMuAAFA==",
   "success": true,
   "projectFilePath": "C:\\Users\\adeog\\OneDrive\\Desktop\\team05\\team05project\\team_project.csproj",
-  "expectedPackageFiles": [
-    "C:\\Users\\adeog\\.nuget\\packages\\microsoft.netcore.app.runtime.linux-x64\\8.0.2\\microsoft.netcore.app.runtime.linux-x64.8.0.2.nupkg.sha512",
-    "C:\\Users\\adeog\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.linux-x64\\8.0.2\\microsoft.aspnetcore.app.runtime.linux-x64.8.0.2.nupkg.sha512",
-    "C:\\Users\\adeog\\.nuget\\packages\\microsoft.netcore.app.host.linux-x64\\8.0.2\\microsoft.netcore.app.host.linux-x64.8.0.2.nupkg.sha512"
-  ],
+  "expectedPackageFiles": [],
   "logs": []
 }

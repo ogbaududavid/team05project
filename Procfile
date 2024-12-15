@@ -1,1 +1,0 @@
-web: dotnet ./publish/team_project.dll
