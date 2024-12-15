@@ -4,14 +4,11 @@ using team_project.Services;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
 
-
 builder.Services.AddSingleton<AccountService>();
 builder.Services.AddSingleton<TaskService>();
-
 
 var app = builder.Build();
 
@@ -24,11 +21,15 @@ if (!app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
-
 app.UseStaticFiles();
 app.UseAntiforgery();
 
+// Map Razor Components.
 app.MapRazorComponents<App>()
     .AddInteractiveServerRenderMode();
+
+// Heroku assigns a port via the PORT environment variable.
+var port = Environment.GetEnvironmentVariable("PORT") ?? "5225";
+app.Urls.Add($"http://*:{port}");
 
 app.Run();
