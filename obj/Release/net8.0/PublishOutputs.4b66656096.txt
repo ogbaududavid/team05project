@@ -1,0 +1,7 @@
+C:\Users\adeog\OneDrive\Desktop\team05\team05project\bin\Release\net8.0\publish\team_project.exe
+C:\Users\adeog\OneDrive\Desktop\team05\team05project\bin\Release\net8.0\publish\appsettings.Development.json
+C:\Users\adeog\OneDrive\Desktop\team05\team05project\bin\Release\net8.0\publish\appsettings.json
+C:\Users\adeog\OneDrive\Desktop\team05\team05project\bin\Release\net8.0\publish\team_project.dll
+C:\Users\adeog\OneDrive\Desktop\team05\team05project\bin\Release\net8.0\publish\team_project.deps.json
+C:\Users\adeog\OneDrive\Desktop\team05\team05project\bin\Release\net8.0\publish\team_project.runtimeconfig.json
+C:\Users\adeog\OneDrive\Desktop\team05\team05project\bin\Release\net8.0\publish\team_project.pdb
