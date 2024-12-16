@@ -1,7 +1,6 @@
 @page "/login"
 @using team_project.Services
 @using team_project.Models
-@rendermode InteractiveServer
 @inject IJSRuntime JSRuntime
 @inject NavigationManager Navigation
 
@@ -23,8 +22,8 @@
 </div>
 
 @code {
-    private string username;
-    private string password;
+    private string username ="";
+    private string password ="";
     private object message = "";
 
     private void login()

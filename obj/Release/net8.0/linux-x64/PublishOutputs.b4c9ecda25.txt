@@ -1,7 +1,0 @@
-C:\Users\adeog\OneDrive\Desktop\team05\team05project\publish\team_project
-C:\Users\adeog\OneDrive\Desktop\team05\team05project\publish\appsettings.Development.json
-C:\Users\adeog\OneDrive\Desktop\team05\team05project\publish\appsettings.json
-C:\Users\adeog\OneDrive\Desktop\team05\team05project\publish\team_project.dll
-C:\Users\adeog\OneDrive\Desktop\team05\team05project\publish\team_project.deps.json
-C:\Users\adeog\OneDrive\Desktop\team05\team05project\publish\team_project.runtimeconfig.json
-C:\Users\adeog\OneDrive\Desktop\team05\team05project\publish\team_project.pdb

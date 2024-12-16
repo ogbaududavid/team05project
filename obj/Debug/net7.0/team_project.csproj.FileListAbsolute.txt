@@ -1,7 +1,0 @@
-C:\Users\adeog\OneDrive\Desktop\team05\team05project\obj\Debug\net7.0\team_project.csproj.AssemblyReference.cache
-C:\Users\adeog\OneDrive\Desktop\team05\team05project\obj\Debug\net7.0\team_project.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\adeog\OneDrive\Desktop\team05\team05project\obj\Debug\net7.0\team_project.AssemblyInfoInputs.cache
-C:\Users\adeog\OneDrive\Desktop\team05\team05project\obj\Debug\net7.0\team_project.AssemblyInfo.cs
-C:\Users\adeog\OneDrive\Desktop\team05\team05project\obj\Debug\net7.0\team_project.csproj.CoreCompileInputs.cache
-C:\Users\adeog\OneDrive\Desktop\team05\team05project\obj\Debug\net7.0\team_project.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\adeog\OneDrive\Desktop\team05\team05project\obj\Debug\net7.0\team_project.sourcelink.json
