@@ -64,9 +64,3 @@ C:\Users\USER\Desktop\BYUI\2024 3 Semester\CSE 325 .NET Software Development\tea
 C:\Users\USER\Desktop\BYUI\2024 3 Semester\CSE 325 .NET Software Development\team05project\obj\Release\net8.0\team_project.pdb
 C:\Users\USER\Desktop\BYUI\2024 3 Semester\CSE 325 .NET Software Development\team05project\obj\Release\net8.0\team_project.genruntimeconfig.cache
 C:\Users\USER\Desktop\BYUI\2024 3 Semester\CSE 325 .NET Software Development\team05project\obj\Release\net8.0\ref\team_project.dll
-C:\Users\USER\Desktop\BYUI\2024 3 Semester\CSE 325 .NET Software Development\team05project\bin\Release\net8.0\publish\web.config
-C:\Users\USER\Desktop\BYUI\2024 3 Semester\CSE 325 .NET Software Development\team05project\bin\Release\net8.0\global.json
-C:\Users\USER\Desktop\BYUI\2024 3 Semester\CSE 325 .NET Software Development\team05project\bin\Release\net8.0\publish\appsettings.Development.json
-C:\Users\USER\Desktop\BYUI\2024 3 Semester\CSE 325 .NET Software Development\team05project\bin\Release\net8.0\publish\appsettings.json
-C:\Users\USER\Desktop\BYUI\2024 3 Semester\CSE 325 .NET Software Development\team05project\bin\Release\net8.0\publish\team_project.deps.json
-C:\Users\USER\Desktop\BYUI\2024 3 Semester\CSE 325 .NET Software Development\team05project\bin\Release\net8.0\publish\team_project.runtimeconfig.json

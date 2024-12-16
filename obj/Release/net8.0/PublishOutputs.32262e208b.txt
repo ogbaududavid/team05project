@@ -1,0 +1,7 @@
+C:\Users\USER\Desktop\BYUI\2024 3 Semester\CSE 325 .NET Software Development\team05project\bin\Release\net8.0\publish\team_project.exe
+C:\Users\USER\Desktop\BYUI\2024 3 Semester\CSE 325 .NET Software Development\team05project\bin\Release\net8.0\publish\appsettings.Development.json
+C:\Users\USER\Desktop\BYUI\2024 3 Semester\CSE 325 .NET Software Development\team05project\bin\Release\net8.0\publish\appsettings.json
+C:\Users\USER\Desktop\BYUI\2024 3 Semester\CSE 325 .NET Software Development\team05project\bin\Release\net8.0\publish\team_project.dll
+C:\Users\USER\Desktop\BYUI\2024 3 Semester\CSE 325 .NET Software Development\team05project\bin\Release\net8.0\publish\team_project.deps.json
+C:\Users\USER\Desktop\BYUI\2024 3 Semester\CSE 325 .NET Software Development\team05project\bin\Release\net8.0\publish\team_project.runtimeconfig.json
+C:\Users\USER\Desktop\BYUI\2024 3 Semester\CSE 325 .NET Software Development\team05project\bin\Release\net8.0\publish\team_project.pdb

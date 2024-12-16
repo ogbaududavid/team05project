@@ -1,3 +1,5 @@
+using System.ComponentModel.DataAnnotations;
+
 namespace team_project.Models
 {
     // Account Model
@@ -5,8 +7,11 @@ namespace team_project.Models
     {
         
         public int Id { get; set; }
-        public string Username { get; set; }
-        public string Password { get; set; }
+
+        [Required]
+        public string? Username { get; set; }
+        [Required]
+        public string? Password { get; set; }
     }
 
 }
