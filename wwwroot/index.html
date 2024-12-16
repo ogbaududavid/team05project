@@ -1,0 +1,44 @@
+<!-- <script>
+    function scrollToElement(elementId) {
+        var target = document.getElementById(elementId);
+        if (target) {
+            target.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+    }
+</script> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Your Blazor App</title>
+
+    <!-- Link to the CSS styles for Blazor (optional, if you have custom CSS) -->
+    <link href="css/app.css" rel="stylesheet" />
+
+    <!-- Add any additional meta tags or CSS here -->
+
+    <!-- External scripts can go here -->
+    <script src="https://cdn.example.com/your-external-script.js"></script>
+</head>
+<body>
+    <app>Loading...</app> <!-- Blazor component will be injected here -->
+
+    <!-- Blazor WebAssembly Runtime -->
+    <script src="_framework/blazor.webassembly.js"></script>
+
+    <!-- Move your custom scroll function here -->
+    <script>
+        function scrollToElement(elementId) {
+            var target = document.getElementById(elementId);
+            if (target) {
+                target.scrollIntoView({ behavior: "smooth", block: "start" });
+            }
+        }
+    </script>
+
+    <!-- Optionally, you can add more scripts or inline JavaScript below -->
+</body>
+</html>
