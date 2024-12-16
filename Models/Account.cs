@@ -1,5 +1,6 @@
 namespace team_project.Models
 {
+    // Account Model
     public class Account
     {
         
