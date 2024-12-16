@@ -1,6 +1,12 @@
 C:\Users\USER\Desktop\BYUI\2024 3 Semester\CSE 325 .NET Software Development\team05project\publish\team_project.exe
+C:\Users\USER\Desktop\BYUI\2024 3 Semester\CSE 325 .NET Software Development\team05project\publish\publish\web.config
 C:\Users\USER\Desktop\BYUI\2024 3 Semester\CSE 325 .NET Software Development\team05project\publish\appsettings.Development.json
 C:\Users\USER\Desktop\BYUI\2024 3 Semester\CSE 325 .NET Software Development\team05project\publish\appsettings.json
+C:\Users\USER\Desktop\BYUI\2024 3 Semester\CSE 325 .NET Software Development\team05project\publish\global.json
+C:\Users\USER\Desktop\BYUI\2024 3 Semester\CSE 325 .NET Software Development\team05project\publish\publish\appsettings.Development.json
+C:\Users\USER\Desktop\BYUI\2024 3 Semester\CSE 325 .NET Software Development\team05project\publish\publish\appsettings.json
+C:\Users\USER\Desktop\BYUI\2024 3 Semester\CSE 325 .NET Software Development\team05project\publish\publish\team_project.deps.json
+C:\Users\USER\Desktop\BYUI\2024 3 Semester\CSE 325 .NET Software Development\team05project\publish\publish\team_project.runtimeconfig.json
 C:\Users\USER\Desktop\BYUI\2024 3 Semester\CSE 325 .NET Software Development\team05project\publish\team_project.dll
 C:\Users\USER\Desktop\BYUI\2024 3 Semester\CSE 325 .NET Software Development\team05project\publish\team_project.deps.json
 C:\Users\USER\Desktop\BYUI\2024 3 Semester\CSE 325 .NET Software Development\team05project\publish\team_project.runtimeconfig.json
