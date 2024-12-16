@@ -6,11 +6,13 @@ namespace team_project.Services
     {
         private static List<TaskItem> _tasks = new List<TaskItem>();
 
+        // Gets all tasks
         public List<TaskItem> GetTasks()
         {
             return _tasks;
         }
 
+        //Gets task by id
         public TaskItem? GetTaskById(string id)
         {
             TaskItem task =  _tasks.Find(t => t.Id == id);
@@ -22,6 +24,7 @@ namespace team_project.Services
             }
         }
         
+        // Creates a new task
         public string CreateTask(string taskName, string description, string priority, DateTime dueDate, bool isCompleted)
         {
             var id = Guid.NewGuid().ToString();
@@ -45,7 +48,7 @@ namespace team_project.Services
             }
         }
 
-
+        // Update an existing task
         public void UpdateTask(TaskItem task)
         {
             var existingTask = GetTaskById(task.Id);
@@ -60,7 +63,7 @@ namespace team_project.Services
             }
         }
 
-
+        // Deletes an existing task
         public void DeleteTask(string id)
         {
             var taskToDelete = GetTaskById(id);
@@ -70,6 +73,7 @@ namespace team_project.Services
             }
         }
 
+        // Marks a task as completed
         public void CompleteTask(string id)
         {
             var task = GetTaskById(id);

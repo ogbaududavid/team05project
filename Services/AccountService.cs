@@ -21,6 +21,7 @@ namespace team_project.Services
             }
         }
 
+        // Creates a user account
         public string CreateAccount(string username, string password)
         {
             bool accountMatch = _accounts.Any(account => account.Username == username && account.Password == password);
@@ -37,6 +38,7 @@ namespace team_project.Services
             }
         }
 
+        // Deletes an existing user account
         public string DeleteAccount(string username, string password)
         {
             Account? accountMatch = _accounts.Find(account => account.Username == username && account.Password == password);
@@ -51,6 +53,7 @@ namespace team_project.Services
             }
         }
 
+        // Retrieves an existing user account
         public Account? GetAccount(string username, string password)
         {
             Account? accountData = _accounts.Find(account => account.Username == username && account.Password == password);
