@@ -1,7 +1,5 @@
 [build]
   command = "dotnet publish -c Release -o ./publish"
-  publish = "publish/wwwroot"
+  publish = "publish/wwwroot"  # The output directory of your app after publishing
 
-[[plugins]]
-  package = "netlify-plugin-dotnet"
-  pinned_version = "8.0"
+# Optional: You can define environment variables, add caching, etc.
