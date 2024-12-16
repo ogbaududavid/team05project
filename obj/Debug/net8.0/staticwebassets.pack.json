@@ -1,0 +1,41 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\USER\\Desktop\\BYUI\\2024 3 Semester\\CSE 325 .NET Software Development\\team05project\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\team_project.bundle.scp.css",
+      "PackagePath": "staticwebassets\\team_project.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Desktop\\BYUI\\2024 3 Semester\\CSE 325 .NET Software Development\\team05project\\wwwroot\\app.css",
+      "PackagePath": "staticwebassets\\app.css"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Desktop\\BYUI\\2024 3 Semester\\CSE 325 .NET Software Development\\team05project\\wwwroot\\bootstrap\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Desktop\\BYUI\\2024 3 Semester\\CSE 325 .NET Software Development\\team05project\\wwwroot\\bootstrap\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Desktop\\BYUI\\2024 3 Semester\\CSE 325 .NET Software Development\\team05project\\wwwroot\\favicon.png",
+      "PackagePath": "staticwebassets\\favicon.png"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.team_project.props",
+      "PackagePath": "build\\team_project.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.team_project.props",
+      "PackagePath": "buildMultiTargeting\\team_project.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.team_project.props",
+      "PackagePath": "buildTransitive\\team_project.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.team_project.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
