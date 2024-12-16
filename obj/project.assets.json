@@ -8,24 +8,25 @@
     "net8.0": []
   },
   "packageFolders": {
-    "C:\\Users\\adeog\\.nuget\\packages\\": {}
+    "C:\\Users\\USER\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\adeog\\OneDrive\\Desktop\\team05\\team05project\\team_project.csproj",
+      "projectUniqueName": "C:\\Users\\USER\\Desktop\\BYUI\\2024 3 Semester\\CSE 325 .NET Software Development\\team05project\\team_project.csproj",
       "projectName": "team_project",
-      "projectPath": "C:\\Users\\adeog\\OneDrive\\Desktop\\team05\\team05project\\team_project.csproj",
-      "packagesPath": "C:\\Users\\adeog\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\adeog\\OneDrive\\Desktop\\team05\\team05project\\obj\\",
+      "projectPath": "C:\\Users\\USER\\Desktop\\BYUI\\2024 3 Semester\\CSE 325 .NET Software Development\\team05project\\team_project.csproj",
+      "packagesPath": "C:\\Users\\USER\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\USER\\Desktop\\BYUI\\2024 3 Semester\\CSE 325 .NET Software Development\\team05project\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\adeog\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\USER\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
       ],
       "sources": {
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -67,7 +68,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.201/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.402/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
