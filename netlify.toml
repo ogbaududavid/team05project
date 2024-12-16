@@ -1,5 +1,3 @@
 [build]
   command = "dotnet publish -c Release -o ./publish"
   publish = "publish/wwwroot"  # The output directory of your app after publishing
-
-# Optional: You can define environment variables, add caching, etc.
