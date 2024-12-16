@@ -1,0 +1,7 @@
+[build]
+  command = "dotnet publish -c Release -o ./publish"
+  publish = "publish/wwwroot"
+
+[[plugins]]
+  package = "netlify-plugin-dotnet"
+  version = "8.0"  # or the correct version of .NET you need
