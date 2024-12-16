@@ -4,4 +4,4 @@
 
 [[plugins]]
   package = "netlify-plugin-dotnet"
-  version = "8.0"  # or the correct version of .NET you need
+  pinned_version = "8.0"
