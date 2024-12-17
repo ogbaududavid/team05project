@@ -8,15 +8,17 @@ FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 WORKDIR /src
 
 # Copy the .csproj file to restore dependencies first
-COPY ["team05project/team_project.csproj", "./"]  
+# Adjusted the path since 'team05project' is the root folder
+COPY team05project/team_project.csproj ./ 
+
+# Restore dependencies
 RUN dotnet restore "team_project.csproj"
 
-# Copy the rest of the application files
-COPY . .
+# Copy the rest of the application files from the root directory
+COPY . ./
 
 # Build the app
-WORKDIR "/src"
-RUN dotnet build "team05project.csproj" -c Release -o /app/build
+RUN dotnet build "team05project/team_project.csproj" -c Release -o /app/build
 
 # Publish the app to a folder
 FROM build AS publish
@@ -27,4 +29,5 @@ FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
 
-ENTRYPOINT ["dotnet", "team05project.dll"]  # Ensure this matches your output file name
+# Entry point for the application
+ENTRYPOINT ["dotnet", "team05project.dll"]
